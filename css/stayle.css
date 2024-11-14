@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.parent{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(4 ,1fr);
+grid-template-rows: 70px repeat(2 ,1fr) 70px;
+    grid-template-areas:
+    "header header header header"
+    "aside main main main"
+    "aside content1 content2 content3" 
+    "footer footer footer footer";
+    gap: 4px;
+}
+
+    .header{
+        background-color:rgb(50, 50, 105);
+        color: white;
+        padding: 10px 20px;
+        grid-area: header;
+    }
+    .header h1{
+        font-size: 25px;
+        color:white;
+        width: 30%;
+        float: left;
+    }
+    .header h1 i{
+        color: white;
+        font-size: 25px;
+        margin-top:20px;
+    cursor: pointer;
+  
+}
+
+.test{
+    text-align: right;
+    font-size: 20px;
+    display: none;
+    padding-right: 10%;
+    margin-top: 30px;
+    
+    }
+    
+    .test i{
+        color: white;
+    
+    }
+       
+    .list1{
+           
+            list-style: none;
+            float: right;
+
+        }
+        .list1 li{
+            display: inline-block;
+            margin-top: 11px;
+        }
+        .list1 a{
+            color: #fff;
+            text-decoration: none;
+            padding: 0 23px;
+           font-size: 20;
+        }
+        .list1 i{
+            color: white;
+            font-size: 20;
+            cursor: pointer;
+        }
+
+main{
+
+background-image:url(../images/WhatsApp\ Image\ 2024-10-01\ at\ 14.26.50_e19e9874.jpg);
+background-size: cover;
+grid-area: main;
+color: white;
+padding: 20px;
+    }
+    aside{
+
+padding: 10px 20px ;
+background-color:rgb(107, 107, 148);
+grid-area: aside;
+color: #fff;
+}
+.par pt{
+color:rgb(50, 50, 105);
+font-size: 18;
+}
+aside p{
+margin-top: 20px;
+font-size: 17px;
+color: #fff;    
+}
+
+
+    .content1{
+padding: 10px 20px ;
+background-image: url(../images/WhatsApp\ Image\ 2024-10-13\ at\ 02.30.18_9e2a3118.jpg);
+background-size: cover;
+font-size: 13px;
+color: #fff;
+grid-area: content1;
+    }
+    .content2{
+padding: 10px 20px ;
+font-size: 13px;
+color: #fff;
+background-image: url(../images/WhatsApp\ Image\ 2024-10-01\ at\ 14.19.01_f4ee1f63.jpg);
+background-size: cover;
+grid-area: content2;
+    }
+    .content3{
+padding: 10px 20px ;
+font-size: 13px;
+color: #fff;
+background-image: url(../images/WhatsApp\ Image\ 2024-10-13\ at\ 02.31.08_def73002.jpg);
+background-size: cover;
+grid-area: content3;
+    }
+
+    footer{
+        line-height: 70px;
+        font-weight: bold;
+        font-size: 20px;
+        color: #fff;
+        background-color:rgb(29, 29, 37);
+        grid-area: footer;
+        text-align: center;
+    }
+
+    footer i{
+        margin-left: 10px;
+        color: rgb(107, 107, 148);
+    }
+    
+    footer i:hover{
+        color: rgb(184, 184, 211);
+    }
+    
+    footer span{
+        color: rgb(167, 96, 173);
+    
+    }
+    
+
+
+
+    @media(max-width : 568px){
+        .parent{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 300px 200px 200px 200px 0.4fr;
+        grid-template-areas: 
+        "header"
+        "aside"
+        "main"
+        "content1"
+        "content2"
+        "content3"
+        "footer"
+        ;
+        }
+        .parent .list1 a{
+            display: none;
+        }
+        .parent .list1 i{
+            display: none;
+        }
+        
+        .test {
+          display: block;
+        
+        }
+        }
+        
+        .test .overlay{
+            position: absolute;
+            top: 97px;
+            left: -130px;
+            right: 484px;
+            bottom: 0;
+             background-color: rgba(0,0,0,0.8);
+            opacity: 0;
+            visibility: hidden;
+            transition: 2s;
+            z-index: 5; 
+        
+        }
+        
+        .test:hover .overlay{
+            opacity: 1;
+            visibility: visible;
+            left: 0;
+            right: 0;
+        }
+        
+        .overlay a{
+            display: block;
+        text-align: center;
+        text-transform: capitalize;
+        font-weight: bold;
+            color: white;
+            font-size: 20px;
+        text-decoration: none;
+        list-style: none;
+        margin-top: 50px;
+        }
+        
+        .overlay a i{
+       margin-top: 20px;
+            }
+        
+        
